@@ -7,8 +7,9 @@ ORIGINAL_SIZE <- 3
 ORIGINAL_YMIN <- -1.5
 
 THEMES <- list(
-    inferno = c(heat.colors(12), 'black'),
-    bnw = grey(20:0 / 20)
+    heat = heat.colors(12),
+    red = rgb(.8 + 20:0 / 100, 20:0 / 20, 20:0 / 20),
+    gray = grey(20:0 / 20)
 )
 
 shinyServer(function (input, output) {

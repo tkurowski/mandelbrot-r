@@ -21,10 +21,11 @@ shinyUI(fluidPage(
             #actionButton("draw", "Update"),
             hr(),
             selectInput("theme", h4("Theme"),
-                        choices = list("Black'n'White" = 'bnw',
-                                       "Inferno" = 'inferno'))
+                        choices = list("Black Ink" = 'gray',
+                                       "Blood" = 'red',
+                                       "Solar" = 'heat'))
         ),
-        mainPanel(textOutput("txt"), plotOutput("img"))
+        mainPanel(plotOutput("img"))
     )
 ))
 
