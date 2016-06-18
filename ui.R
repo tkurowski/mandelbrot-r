@@ -17,15 +17,19 @@ shinyUI(fluidPage(
             sliderInput("sy", "scroll y", post='%',
                         min=0, max=100, value=50, step=.1),
             p(HTML(paste("<em>Note, scroll has no effect",
-                         "until you limit the the range</em>."))),
+                         "until you limit the the range</em>.")))
             #actionButton("draw", "Update"),
-            hr(),
-            selectInput("theme", h4("Theme"),
-                        choices = list("Black Ink" = 'gray',
-                                       "Blood" = 'red',
-                                       "Solar" = 'heat'))
         ),
-        mainPanel(plotOutput("img"))
+        mainPanel(p(HTML(paste("Mandelbrot fractal is probably the",
+                               "most famous fractal of all time.",
+                               "It is named after a french mathematician",
+                               "of polish origin,",
+                               "<a href='https://en.wikipedia.org/wiki/Benoit_Mandelbrot'>Benoit Mandelbrot</a>."))),
+                  selectInput("theme", "Theme",
+                              choices = list("Black Ink" = 'gray',
+                                             "Blood" = 'red',
+                                             "Solar" = 'heat')),
+                  plotOutput("img"))
     )
 ))
 
