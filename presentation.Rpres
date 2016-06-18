@@ -1,0 +1,54 @@
+Mandelbrot Fractal
+========================================================
+author: Tomasz Kurowski
+date: 14 June 2016
+autosize: true
+transition: fade
+
+What are Fractals?
+========================================================
+
+<p style="font-size: 1.1em; color: gray; padding: .25em 1em; border-left: solid 5px #96A2B6;">
+<em>a natural phenomenon or a mathematical set that exhibits a repeating pattern that displays at every scale</em> -- <a href="https://en.wikipedia.org/wiki/Fractal">wikipedia</a>
+</p>
+
+- latin  _frāctus_ -- broken, fractured
+- expanding/evolving symmetry
+- _"beautiful, damn hard, increasingly useful. That's fractals."_ -- Mandelbrot
+
+<style>
+/* fix safari column styles §*/
+.reveal .slides section .column {position: absolute;}
+</style>
+Mandelbrot Set
+========================================================
+
+- a _complex plain_ for which<br/>
+$z_{n+1}\!= z_n^2 + c$
+<br/>remains bounded
+- named and defined by [Adrien Douady](https://en.wikipedia.org/wiki/Adrien_Douady)
+in tribute to [Benoit Mandelbrot](https://en.wikipedia.org/wiki/Benoit_Mandelbrot)
+- the fractal was first drawn by Robert W. Brooks and Peter Matelski in 1978
+<br/>`as ASCI art :)`
+
+***
+
+```{r, echo=FALSE, cache=TRUE}
+source('mandelbrot.R')
+image(mandelbrot(), col = c(grey(20:0 / 20)), asp = 1, axes = FALSE)
+```
+
+Try yourself
+========================================================
+
+<span style="position: absolute; right: 5%; top:6%; font-size: .9em;">http://tkurowski.shinyapps.io/mandelbrot</span>
+![app](presentation-img/screenshot.png)
+
+Thank you
+========================================================
+
+<br/>
+### References
+* https://en.wikipedia.org/wiki/Fractal
+* https://en.wikipedia.org/wiki/Mandelbrot_set
+* http://www.r-bloggers.com/mandelbrot-set-evolved/
