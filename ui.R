@@ -1,7 +1,7 @@
 library(shiny)
 
 shinyUI(fluidPage(
-    titlePanel("Mandelbort fractal"),
+    titlePanel("Mandelbrot fractal"),
 
     sidebarLayout(
         sidebarPanel(
